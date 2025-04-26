@@ -2,10 +2,9 @@ import { Box, Button, Card, Divider, Grid, Modal, TextField } from '@mui/materia
 import React from 'react'
 import CartItem from './CartItem'
 import AddressCard from './AddressCard'
-import HomeIcon from '@mui/icons-material/Home';
-import * as Yup from 'yup'
+import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';import * as Yup from 'yup'
 import { Formik, ErrorMessage, Field } from 'formik';
-const style = {
+export const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -79,13 +78,12 @@ const Cart = () => {
                     <AddressCard handleSelectAddress={createOrderUsingSelectedAddress} item={item} showButton={true}/>
                     ))}
                     <Card className="flex gap-5 w-64 p-5">
-                    <HomeIcon/>
+                    <AddLocationAltIcon/>
                     <div className='space-y-3 text-gray-500'>
-                    <h1 className='font-semibold text-lg text-white'>Home</h1>
-                    <p>
-                        Đại Học Hà Nội, Trung Văn, Nam Từ Liêm, Hà Nội
-                    </p>
-                    <Button variant="outlined" fullWidth onClick={handleOpenAddressModal}>Select</Button>
+                    <h1 className='font-semibold text-lg text-white'>Add Address</h1>
+                    
+                    <Button variant='outlined' fullWith onClick={handleOpenAddressModal}>Add</Button>
+            
                     </div>
                     </Card>
                 </div>
